@@ -1,0 +1,21 @@
+@use "../base" as *;
+
+.category {
+    &-box {
+        @include size(136px, auto);
+        @include flexCenter(space-between, center);
+        padding-left: 10px;
+        border-radius: 10px;
+        box-shadow: 0 20px 60px 10px rgba(237, 237, 246, 0.20);
+        cursor: pointer;
+    }
+    &__item-name {
+        color: $secondary-color-1;
+    }
+    &__img {
+        @include size(44px, 38px);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}

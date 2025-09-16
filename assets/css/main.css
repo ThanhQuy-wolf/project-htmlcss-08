@@ -1099,6 +1099,7 @@ html {
 }
 
 body {
+  font-family: "Gordita";
   font-size: 1.6rem;
 }
 
@@ -1118,6 +1119,110 @@ button {
   outline: none;
   border: none;
   background: transparent;
+}
+
+.text-bold-14,
+.text-bold-15,
+.text-bold-16,
+.text-bold-18,
+.text-bold-22,
+.text-bold-26,
+.text-bold-30,
+.text-bold-36,
+.text-bold-42 {
+  font-weight: 700;
+}
+
+.text-md-14,
+.text-md-15,
+.text-md-16,
+.text-md-18,
+.text-md-22,
+.text-md-26,
+.text-md-30,
+.text-md-36,
+.text-md-42 {
+  font-weight: 500;
+}
+
+.text-rg-14,
+.text-rg-15,
+.text-rg-16,
+.text-rg-18,
+.text-rg-22 {
+  font-weight: 400;
+}
+
+.text-bold-42,
+.text-md-42 {
+  font-size: 4.2rem;
+}
+
+.text-bold-36,
+.text-md-36 {
+  font-size: 3.6rem;
+}
+
+.text-bold-30,
+.text-md-30 {
+  font-size: 3rem;
+}
+
+.text-bold-26,
+.text-md-26 {
+  font-size: 2.6rem;
+}
+
+.text-bold-22,
+.text-md-22,
+.text-rg-22 {
+  font-size: 2.2rem;
+}
+
+.text-bold-18,
+.text-md-18,
+.text-rg-18 {
+  font-size: 1.8rem;
+}
+
+.text-bold-16,
+.text-md-16,
+.text-rg-16 {
+  font-size: 1.6rem;
+}
+
+.text-bold-15,
+.text-md-15,
+.text-rg-15 {
+  font-size: 1.5rem;
+}
+
+.text-bold-14,
+.text-md-14,
+.text-rg-14 {
+  font-size: 1.4rem;
+}
+
+.category-box {
+  width: 136px;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10px;
+  border-radius: 10px;
+  box-shadow: 0 20px 60px 10px rgba(237, 237, 246, 0.2);
+  cursor: pointer;
+}
+.category__item-name {
+  color: #1A162E;
+}
+.category__img {
+  width: 44px;
+  height: 38px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 /*# sourceMappingURL=main.css.map */
