@@ -1,0 +1,52 @@
+@use "../base" as *;
+
+.order {
+    &-box {
+        @include size(335px, 166px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px;
+        border-radius: 10px;
+        background: $primary-color-ocean;
+    }
+    &__title {
+        width: 50%;
+        line-height: 1.46667;
+        color: #fff;
+    }
+    &__level-box {
+        display: flex;
+        gap: 12px;
+    }
+    &__level {
+        color: #fff;
+    }
+    &__line-box {
+        display: flex;
+        align-items: center
+    }
+    &__line {
+        @include size(73px, 3px);
+        background: #fff;
+    }
+    &__background {
+        @include position(bottom-right);
+        position: absolute;
+        z-index: -1;
+    }
+    &__item-snack {
+        @include size(84px, 107px);
+        position: absolute;
+        right: 34px;
+        bottom: 31px;
+        z-index: 1;
+    }
+    &__item-drink {
+        @include size(39px, 53px);
+        position: absolute;
+        right: 15px;
+        bottom: 27px;
+        z-index: 2;
+    }
+}

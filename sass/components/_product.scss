@@ -1,0 +1,27 @@
+@use "../base" as *;
+
+.product {
+    &-box {
+        @include size(329px, auto);
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        padding: 20px;
+        border-radius: 10px;
+        background: #fff;
+    }
+    &__img-cover {
+        @include size(88px);
+        border-radius: 10px;
+        background: transparent;
+    }
+    &__price {
+        display: inline-block;
+        margin-bottom: 6px;
+    }
+    &__price,
+    &__desc {
+        color: $secondary-color-1;
+        line-height: 1.44;
+    }
+}

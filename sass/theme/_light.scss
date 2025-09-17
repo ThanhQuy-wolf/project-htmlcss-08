@@ -1,0 +1,34 @@
+@use "../base/variables" as var;
+
+.rating {
+    &-box {
+        background: #fff;
+    }
+    &__name,
+    &__comment,
+    &__review {
+        color: var.$secondary-color-1;
+    }
+}
+
+.product {
+    &-box {
+        background: #fff;
+    }
+    &__img-cover {
+        background: transparent;
+    }
+    &__price,
+    &__desc {
+        color: var.$secondary-color-1;
+    }
+}
+
+.normal.category {
+    &-box {
+        background: #fff;
+    }
+    &__item-name {
+        color: var.$secondary-color-1;
+    }
+}

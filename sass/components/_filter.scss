@@ -1,0 +1,84 @@
+@use "../base" as *;
+
+.filter {
+    &-box {
+        @include size(312px, auto);
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 62px 20px 20.5px;
+        border-radius: 25px;
+        filter: drop-shadow(0 40px 90px rgba(0, 0, 0, 0.4));
+    }
+    &-box::before {
+        @include size(32px);
+        content: "";
+        position: absolute;
+        top: -13px;
+        right: 23px;
+        border-radius: 3px; /* bo tròn góc -> tạo độ cong */
+        transform: translateX(-50%) rotate(45deg);
+    }
+    &-box,
+    &-box::before,
+    &__circle,
+    &__price-input {
+        background: $text-color-dark-2;
+    }
+    &-name,
+    &__title,
+    &__price-label,
+    &__price-input,
+    &__price-input::placeholder,
+    &__price-dollar {
+        color: #fff;
+    }
+    &__control-bar {
+        display: flex;
+        position: relative;
+    }
+    &__control-bar::before {
+        @include size(100%, 2px);
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        background: $secondary-color-3;
+        z-index: -1;
+    }
+    &__circle {
+        @include size(22px);
+        border: 6px solid $primary-color-yellow;
+        border-radius: 50%;
+        margin-left: 18px;
+    }
+    &__circle:nth-of-type(2) {
+        margin-left: 120px;
+    }
+    &__price-control {
+        display: flex;
+        gap: 30px;
+    }
+    &__price-box {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+    &__price-input {
+        @include size(121px, auto);
+        padding: 8px 22px;
+        border-radius: 6px;
+        border: 1px solid var(--Secondary-Color-Secondary-3, #d2d1d6);
+        margin-top: 10px;
+        align-items: center;
+    }
+    &__price-dollar {
+        position: absolute;
+        left: 12px;
+        top: 36px;
+    }
+    &__line {
+        @include size(100%, 1px);
+        background: #EEE;
+    }
+}

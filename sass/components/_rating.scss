@@ -1,0 +1,32 @@
+@use "../base" as *;
+
+.rating {
+    &-box {
+        @include size(427px, auto);
+        padding: 30px;
+        border-radius: 16px;
+    }
+    &__people {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+    &__name {
+        margin-bottom: 10px;
+    }
+    &__comment {
+        width: 100%;
+        line-height: 1.5;
+    }
+    &__vote {
+        display: flex;
+        gap: 20px;
+    }
+    &__star-box {
+        display: flex;
+        gap: 8px;
+    }
+    &__star {
+        color: $primary-color-yellow;
+    }
+}

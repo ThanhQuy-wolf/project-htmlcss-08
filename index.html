@@ -13,11 +13,13 @@
     <link rel="manifest" href="./assets/favicon/site.webmanifest" />
     <!-- Font -->
     <link rel="stylesheet" href="./assets/fonts/stylesheet.css">
+    <!-- Bootstrap icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.price.css">
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/main.css">
 
     <style>
-        div {
+        .filter-box {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -27,9 +29,26 @@
 </head>
 
 <body>
-    <div class="category-box">
-        <span class="category__item-name text-md-14">Starbucks</span>
-        <img src="./assets/img/category-item.png" alt="Starbucks" class="category__img">
+    <div class="filter-box">
+        <h2 class="filter-name text-md-22">Filter</h2>
+        <h2 class="filter__title text-md-22">Price</h2>
+        <div class="filter__control-bar">
+            <div class="filter__circle"></div>
+            <div class="filter__circle"></div>
+        </div>
+        <div class="filter__price-control">
+            <from class="filter__price-box">
+                <span class="filter__price-dollar">$</span>
+                <label for="minimum" class="filter__price-label text-md-14">Minimum</label>
+                <input type="text" name="minimum" id="minimum" class="filter__price-input" placeholder="30.00">
+            </from>
+            <div class="filter__price-box">
+                <span class="filter__price-dollar">$</span>
+                <label for="maximum" class="filter__price-label text-md-14">Maximum</label>
+                <input type="text" name="maximum" id="maximum" class="filter__price-input" placeholder="100.00">
+            </div>
+        </div>
+        <div class="filter__line"></div>
     </div>
 </body>
 
