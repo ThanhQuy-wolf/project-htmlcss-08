@@ -1,0 +1,128 @@
+@use "../base/mixins" as mix;
+@use "../base/common";
+
+.dropdown {
+    position: absolute;
+    left: 0;
+    width: min(1240px, 100%);
+    padding-top: 54px;
+    color: var(--text-color-dark-3);
+    display: none;
+
+    &__inner {
+        --inner-padding: 30px;
+
+        position: relative;
+        padding: var(--inner-padding);
+        border-radius: 20px;
+        background: var(--background-color-body);
+        box-shadow: 0 40px 90px 20px var(--top-act-dropdown-shadow);
+
+        &::before {
+            content: url("../icons/dropdown-arrow.svg");
+            position: absolute;
+            top: -13px;
+            left: var(--arrow-left-pos);
+            filter: var(--icon-dropdown-color);
+            translate: -50%;
+        }
+    }
+}
+
+.top-menu {
+    --main-column-width: 292px;
+    --max-inner-height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
+    position: relative;
+
+    &__main {
+        width: var(--main-column-width);
+        height: var(--max-inner-height);
+        border-right: 1px solid var(--secondary-color-3);
+        overflow-y: auto;
+    }
+}
+
+.menu-column {
+    display: flex;
+    gap: 14px;
+
+    + .menu-column {
+        margin-top: 25px;
+    }
+
+    &__icon {
+        @include mix.size(36px);
+        position: relative;
+        flex-shrink: 0;
+
+        @include mix.breakpoint(xl) {
+            display: none;
+        }
+    }
+
+    &__content {
+        flex: 1;
+    }
+
+    &__icon-1 {
+        @include mix.size(30px);
+        object-fit: contain;
+    }
+
+    &__icon-2 {
+        @include mix.size(24px);
+        position: absolute;
+        @include mix.position(bottom-right);
+        object-fit: contain;
+        filter: var(--menu-column-icon-color);
+    }
+
+    &__heading {
+        margin-top: 6px;
+    }
+
+    &__list {
+        margin-top: 19px;
+    }
+
+    &__item {
+        &--active .sub-menu {
+            display: grid;
+        }
+    }
+
+    &__item--active > &__link,
+    &__item:hover > &__link {
+        color: var(--primary-color-blue);
+        font-weight: 500;
+    }
+
+    &__link {
+        @extend .text-rg-14;
+        display: block;
+        padding: 10px 0;
+    }
+}
+
+.sub-menu {
+    position: absolute;
+    inset: 0 0 0 var(--main-column-width);
+
+    display: none;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+    padding-left: var(--inner-padding);
+
+    overflow-y: auto;
+
+    &--not-main {
+        @extend .text-md-16;
+        position: initial;
+        inset: initial;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        height: var(--max-inner-height);
+        padding-left: 0;
+    }
+}

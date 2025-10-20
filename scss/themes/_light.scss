@@ -1,0 +1,39 @@
+@use "../base/mixins" as mix;
+
+html {
+    --primary-color-red: #f94545;
+    --primary-color-green: #67b044;
+    --primary-color-blue: #0071dc;
+    --primary-color-violet: #7644e1;
+    --primary-color-yellow: #ffb700;
+    --primary-color-ocean: #77dae6;
+    --secondary-color-1: #1a162e;
+    --secondary-color-2: #9e9da8;
+    --secondary-color-3: #d2d1d6;
+    --secondary-color-4: #ededf6;
+    --secondary-color-5: #fff;
+    --background-color-header: #eee;
+    --background-color-body: #fff;
+    --background-color-white: #f8f8fb;
+    --text-color-dark-1: #171c28;
+    --text-color-dark-2: #292e39;
+    --text-color-dark-3: #1a162e;
+
+    --icon-color: brightness(0) saturate(100%) invert(8%) sepia(9%) saturate(4201%) hue-rotate(211deg) brightness(90%) contrast(96%);
+
+    --top-act-gr-shadow: rgba(237, 237, 246, 0.2);
+
+    // Dropdown
+    --top-act-dropdown-shadow: rgba(200, 200, 200, 0.4);
+    --icon-dropdown-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+
+    @include mix.breakpoint(lg) {
+        --background-color-header: #fff;
+        --background-color-body: #f6f6f6;
+        --background-color-header-shadow: rgba(237, 237, 246, 0.2);
+    }
+
+    // Responsive navbar
+    --background-color-nav: #fff;
+    --icon-navbar-close-color: brightness(0) saturate(100%) invert(9%) sepia(32%) saturate(617%) hue-rotate(184deg) brightness(102%) contrast(96%);
+}

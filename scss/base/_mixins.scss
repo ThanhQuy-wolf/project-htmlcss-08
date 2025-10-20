@@ -1,0 +1,79 @@
+@forward "./gridSystem";
+
+@mixin flexCenter($horizontal: center, $vertical: center) {
+    display: flex;
+    justify-content: $horizontal;
+    align-items: $vertical;
+}
+
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin rounded($tl, $tr: $tl, $br: $tl, $bl: $tl) {
+    border-radius: $tl $tr $br $bl;
+}
+
+@mixin grid($column, $spacing) {
+    --column: #{$column};
+    --spacing: #{$spacing};
+
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: var(--spacing);
+    margin-left: calc(-1 * var(--spacing));
+
+    > * {
+        width: calc(100% / var(--column) - var(--spacing));
+        margin-left: var(--spacing);
+    }
+}
+
+@mixin position($pos) {
+    @if $pos == top-left {
+        top: 0;
+        left: 0;
+    }
+
+    @if $pos == top-right {
+        top: 0;
+        right: 0;
+    }
+
+    @if $pos == bottom-right {
+        bottom: 0;
+        right: 0;
+    }
+
+    @if $pos == bottom-left {
+        bottom: 0;
+        left: 0;
+    }
+
+    @if $pos == center {
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+    }
+}
+
+$grid-breakpoints: (
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px,
+);
+
+@mixin breakpoint($key) {
+    $breakpoint: map-get($map: $grid-breakpoints, $key: $key);
+    @if ($breakpoint) {
+        @media (max-width: ($breakpoint - 0.02)) {
+            @content;
+        }
+    } @else {
+        @error "The value #{$key} is not in breakpoint list!";
+    }
+
+}

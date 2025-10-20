@@ -1,0 +1,142 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Gordita', var(--font-family);
+    font-size: 1.6rem;
+    color: var(--secondary-color-1);
+    background: var(--background-color-body);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a,
+img,
+input,
+button,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    -webkit-tap-highlight-color: transparent;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.text-bold-14,
+.text-bold-15,
+.text-bold-16,
+.text-bold-18,
+.text-bold-22,
+.text-bold-26,
+.text-bold-30,
+.text-bold-36,
+.text-bold-42 {
+    font-weight: var(--font-weight-bold);
+}
+
+.text-md-14,
+.text-md-15,
+.text-md-16,
+.text-md-18,
+.text-md-22,
+.text-md-26,
+.text-md-30,
+.text-md-36,
+.text-md-42 {
+    font-weight: var(--font-weight-md);
+}
+
+.text-rg-14,
+.text-rg-15,
+.text-rg-16,
+.text-rg-18,
+.text-rg-22 {
+    font-weight: var(--font-weight-rg);
+}
+
+.text-bold-42,
+.text-md-42 {
+    font-size: var(--font-size-42);
+}
+
+.text-bold-36,
+.text-md-36 {
+    font-size: var(--font-size-36);
+}
+
+.text-bold-30,
+.text-md-30 {
+    font-size: var(--font-size-30);
+}
+
+.text-bold-26,
+.text-md-26 {
+    font-size: var(--font-size-26);
+}
+
+.text-bold-22,
+.text-md-22,
+.text-rg-22 {
+    font-size: var(--font-size-22);
+}
+
+.text-bold-18,
+.text-md-18,
+.text-rg-18 {
+    font-size: var(--font-size-18);
+}
+
+.text-bold-16,
+.text-md-16,
+.text-rg-16 {
+    font-size: var(--font-size-16);
+}
+
+.text-bold-15,
+.text-md-15,
+.text-rg-15 {
+    font-size: var(--font-size-15);
+}
+
+.text-bold-14,
+.text-md-14,
+.text-rg-14 {
+    font-size: var(--font-size-14);
+}
+
+.icon {
+    filter: var(--icon-color);
+}

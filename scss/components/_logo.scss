@@ -1,0 +1,31 @@
+@use "../base/common" as *;
+@use "../base/mixins" as mix;
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    @include mix.breakpoint(lg) {
+        gap: 10px;
+        margin-left: 39px;
+    }
+
+    @include mix.breakpoint(md) {
+        margin-left: 0;
+    }
+
+    &__title {
+        @extend .text-bold-22;
+
+        @include mix.breakpoint(lg) {
+            font-size: 1.8rem;
+        }
+    }
+
+    &__img {
+        @include mix.breakpoint(lg) {
+            width: 24px;
+        }
+    }
+}
