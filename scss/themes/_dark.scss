@@ -41,6 +41,7 @@ html.dark {
     --icon-navbar-close-color: brightness(0) saturate(100%) invert(94%) sepia(7%) saturate(111%) hue-rotate(191deg) brightness(79%) contrast(92%);
     @include mix.breakpoint(lg) {
         --secondary-color-1: #b9babe;
-        --icon-color: brightness(0) saturate(100%) invert(94%) sepia(7%) saturate(111%) hue-rotate(191deg) brightness(79%) contrast(92%);;
+        --icon-color: brightness(0) saturate(100%) invert(94%) sepia(7%) saturate(111%) hue-rotate(191deg) brightness(79%) contrast(92%);
+        --sidebar-shadow: rgba(23, 28, 40, 0.40);
     }
 }

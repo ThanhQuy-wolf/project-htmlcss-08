@@ -9,6 +9,11 @@
     color: var(--text-color-dark-3);
     display: none;
 
+    @include mix.breakpoint(lg) {
+        position: initial;
+        padding-top: 0;
+    }
+
     &__inner {
         --inner-padding: 30px;
 
@@ -26,12 +31,28 @@
             filter: var(--icon-dropdown-color);
             translate: -50%;
         }
+
+        @include mix.breakpoint(lg) {
+            padding: 0 40px;
+
+            border-radius: 0;
+            background: transparent;
+            box-shadow: none;
+
+            &::before {
+                content: none;
+            }
+        }
+
+        @include mix.breakpoint(sm) {
+            padding: 0 20px;
+        }
     }
 }
 
 .top-menu {
     --main-column-width: 292px;
-    --max-inner-height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
+    --max-inner-height: calc(min(590px, 100vh - 154px) - var(--inner-padding) * 2);
     position: relative;
 
     &__main {
@@ -39,6 +60,12 @@
         height: var(--max-inner-height);
         border-right: 1px solid var(--secondary-color-3);
         overflow-y: auto;
+
+        @include mix.breakpoint(lg) {
+            width: 100%;
+            height: auto;
+            border-right: none;
+        }
     }
 }
 
@@ -50,6 +77,10 @@
         margin-top: 25px;
     }
 
+    @include mix.breakpoint(lg) {
+        margin-top: 10px;
+    }
+
     &__icon {
         @include mix.size(36px);
         position: relative;
@@ -57,6 +88,10 @@
 
         @include mix.breakpoint(xl) {
             display: none;
+        }
+
+        @include mix.breakpoint(lg) {
+            display: block;
         }
     }
 
@@ -78,11 +113,21 @@
     }
 
     &__heading {
-        margin-top: 6px;
+        margin-top: 12px;
+
+        @extend .text-md-16;
+
+        @include mix.breakpoint(lg) {
+            margin-bottom: 26px;
+        }
     }
 
     &__list {
         margin-top: 19px;
+
+        @include mix.breakpoint(lg) {
+            margin-top: 0;
+        }
     }
 
     &__item {
@@ -116,6 +161,12 @@
 
     overflow-y: auto;
 
+    @include mix.breakpoint(lg) {
+        position: initial;
+        grid-template-columns: 1fr;
+        padding-left: 0;
+    }
+
     &--not-main {
         @extend .text-md-16;
         position: initial;
@@ -124,5 +175,10 @@
         grid-template-columns: repeat(4, 1fr);
         height: var(--max-inner-height);
         padding-left: 0;
+
+        @include mix.breakpoint(lg) {
+            grid-template-columns: 1fr;
+            height: auto;
+        }
     }
 }
