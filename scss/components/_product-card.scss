@@ -1,0 +1,56 @@
+@use "../base/common" as *;
+@use "../base/mixins" as mix;
+
+
+.product-card {
+    height: 100%;
+    padding: 16px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px 10px var(--product-card-shadow);
+    background: var(--product-card-bg);
+
+    &__img-wrap {
+        position: relative;
+        padding-top: 100%;
+    }
+
+    &__thumb {
+        @include mix.size(100%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: contain;
+    }
+
+    &__like-btn {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+
+    &__title,
+    &__score,
+    &__price {
+        @extend .text-md-16;
+    }
+
+    &__title {
+        color: var(--product-card-title);
+    }
+
+    &__brand {
+        @extend .text-rg-15;
+
+        margin: 16px 0;
+        color: #9E9DA8;
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+    }
+
+    &__star {
+        margin: 0 6px 0 auto;
+    }
+}

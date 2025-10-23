@@ -1,0 +1,36 @@
+@use "../base/common" as *;
+@use "../base/mixins" as mix;
+
+// Filter button
+.filter-btn {
+    @extend .text-bold-14;
+
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    height: 36px;
+    padding: 0 14px;
+    border-radius: 6px;
+
+    background: var(--filter-bg);
+    color: var(--filter-btn-color);
+
+    &__icon {
+        filter: var(--filter-btn-icon-color);
+    }
+}
+
+// Like button
+.like-btn {
+    @include mix.size(50px);
+    @include mix.flexCenter();
+
+    border-radius: 50%;
+    box-shadow: 0 20px 60px var(--like-btn-shadow);
+    background: var(--like-btn-bg);
+    
+    &__icon {
+        filter: var(--like-btn-fill);
+    }
+}
