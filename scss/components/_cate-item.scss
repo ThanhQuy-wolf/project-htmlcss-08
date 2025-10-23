@@ -3,27 +3,65 @@
 
 .cate-item {
     display: flex;
-    padding: 20px 26px 20px 20px;
     align-items: center;
     gap: 20px;
-    background: var(--cate-item-bg-color);
+
+    height: 100%;
+    padding: 20px 26px 20px 20px;
+    border-radius: 8px;
+    background: var(--cate-item-bg);
+
+    @include mix.screen(xl) {
+        flex-direction: column;
+    }
+
+    @include mix.screen(md) {
+        flex-direction: row;
+    }
 
     &__thumb {
-        @include mix.size(166px);
+        @include mix.size(116px);
         object-fit: contain;
-        border-radius: 10px;
+        border-radius: 8px;
         background: var(--cate-item-thumb-bg);
+
+        @include mix.screen(xl) {
+            width: 100%;
+            height: 150px;
+        }
+
+        @include mix.screen(md) {
+            width: 88px;
+            height: 88px;
+        }
+    }
+
+    &__info {
+        padding-right: 30px;
+
+        @include mix.screen(xxl) {
+            padding-right: 0;
+        }
     }
 
     &__title {
         @extend .text-bold-22;
 
-        color: var(--cate-item-heading-color);
+        margin-bottom: 15px;
+        color: var(--cate-item-title-color);
+
+        @include mix.screen(md) {
+            font-size: 1.8rem;
+        }
     }
 
     &__desc {
         @extend .text-rg-16;
 
         color: var(--secondary-color-1);
+
+        @include mix.screen(md) {
+            font-size: 1.4rem;
+        }
     }
 }

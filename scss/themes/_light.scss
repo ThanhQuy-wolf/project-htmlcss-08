@@ -39,7 +39,12 @@ html {
         --sidebar-shadow: rgba(200, 200, 200, 0.40);
 
     // Category item
-    --cate-item-heading-color: #000;
-    --cate-item-bg-color: #eee;
+    --cate-item-bg: #eee;
+    --cate-item-title-color: #000;
+    --cate-item-heading-color: #1a162e;
     --cate-item-thumb-bg: #fff;
+
+    @include mix.screen(md) {
+        --cate-item-bg: #fff;
+    }
 }

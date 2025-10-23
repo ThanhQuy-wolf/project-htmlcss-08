@@ -14,5 +14,18 @@
         @extend .text-bold-24;
 
         margin-bottom: 20px;
+        color: var(--cate-item-heading-color);
+    }
+
+    &__cate {
+        --grid-gutter-x: 51px;
+
+        @include mix.screen(lg) {
+            --grid-gutter-x: 24px;
+        }
+
+        @include mix.screen(md) {
+            --grid-gutter-y: 20px;
+        }
     }
 }
