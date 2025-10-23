@@ -1,0 +1,29 @@
+@use "../base/common" as *;
+@use "../base/mixins" as mix;
+
+.cate-item {
+    display: flex;
+    padding: 20px 26px 20px 20px;
+    align-items: center;
+    gap: 20px;
+    background: var(--cate-item-bg-color);
+
+    &__thumb {
+        @include mix.size(166px);
+        object-fit: contain;
+        border-radius: 10px;
+        background: var(--cate-item-thumb-bg);
+    }
+
+    &__title {
+        @extend .text-bold-22;
+
+        color: var(--cate-item-heading-color);
+    }
+
+    &__desc {
+        @extend .text-rg-16;
+
+        color: var(--secondary-color-1);
+    }
+}

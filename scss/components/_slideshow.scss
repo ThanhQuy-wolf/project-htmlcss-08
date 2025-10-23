@@ -3,11 +3,6 @@
 
 .slideshow {
     position: relative;
-    margin: 40px 0;
-
-    @include mix.breakpoint(md) {
-        margin: 30px 0;
-    }
 
     &__inner {
         display: flex;
@@ -20,7 +15,7 @@
         width: 100%;
         padding-top: 34%;
 
-        @include mix.breakpoint(md) {
+        @include mix.screen(md) {
             padding-top: 50%;
         }
     }
@@ -54,11 +49,11 @@
         @extend .text-md-18;
         color: var(--color);
 
-        @include mix.breakpoint(lg) {
+        @include mix.screen(lg) {
             font-size: 1.6rem;
         }
 
-        @include mix.breakpoint(sm) {
+        @include mix.screen(sm) {
             font-size: 1.4rem;
         }
     }
@@ -81,7 +76,7 @@
             border: 3px solid var(--color);
             border-radius: 50%;
 
-            @include mix.breakpoint(md) {
+            @include mix.screen(md) {
                 width: 10px;
                 height: 10px;
                 border: 2px solid var(--color);

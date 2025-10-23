@@ -60,6 +60,7 @@ button {
 .text-bold-16,
 .text-bold-18,
 .text-bold-22,
+.text-bold-24,
 .text-bold-26,
 .text-bold-30,
 .text-bold-36,
@@ -72,6 +73,7 @@ button {
 .text-md-16,
 .text-md-18,
 .text-md-22,
+.text-md-24,
 .text-md-26,
 .text-md-30,
 .text-md-36,
@@ -83,7 +85,8 @@ button {
 .text-rg-15,
 .text-rg-16,
 .text-rg-18,
-.text-rg-22 {
+.text-rg-22,
+.text-rg-24 {
     font-weight: var(--font-weight-rg);
 }
 
@@ -105,6 +108,12 @@ button {
 .text-bold-26,
 .text-md-26 {
     font-size: var(--font-size-26);
+}
+
+.text-bold-24,
+.text-md-24,
+.text-rg-24 {
+    font-size: var(--font-size-24);
 }
 
 .text-bold-22,

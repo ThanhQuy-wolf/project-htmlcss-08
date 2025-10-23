@@ -32,16 +32,21 @@ html.dark {
         sepia(88%) saturate(337%) hue-rotate(180deg) brightness(102%)
         contrast(96%);
 
-    @include mix.breakpoint(lg) {
+    @include mix.screen(lg) {
         --background-color-header-shadow: rgba(0, 0, 0, 0.2);
     }
     
     // Responsive navbar
     --background-color-nav: #292e39;
     --icon-navbar-close-color: brightness(0) saturate(100%) invert(94%) sepia(7%) saturate(111%) hue-rotate(191deg) brightness(79%) contrast(92%);
-    @include mix.breakpoint(lg) {
+    @include mix.screen(lg) {
         --secondary-color-1: #b9babe;
         --icon-color: brightness(0) saturate(100%) invert(94%) sepia(7%) saturate(111%) hue-rotate(191deg) brightness(79%) contrast(92%);
         --sidebar-shadow: rgba(23, 28, 40, 0.40);
     }
+
+    // Category item
+    --cate-item-heading-color: #fff;
+    --cate-item-bg-color: #171c28;
+    --cate-item-thumb-bg: #292e39;
 }
