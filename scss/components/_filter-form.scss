@@ -1,0 +1,97 @@
+@use "../base/common" as *;
+@use "../base/mixins" as mix;
+
+.filter-wrap {
+    position: relative;
+    z-index: 1;
+}
+
+.filter {
+    position: absolute;
+    right: 0;
+    top: 50px;
+
+    padding: 30px;
+    border-radius: 20px;
+
+    background: var(--filter-form-bg);
+    box-shadow: 0 40px 90px var(--filter-form-shadow);
+
+    &__heading,
+    &__form-label {
+        @extend .text-md-22;
+
+        color: var(--filter-form-text);
+    }
+
+    &__form {
+        margin-top: 30px;
+
+        &-label {
+            display: block;
+
+            &--small {
+                @extend .text-md-14;
+
+                margin-bottom: 10px;
+            }
+        }
+
+        &-group {
+            margin-top: 20px;
+
+            &--inline {
+                display: flex;
+                gap: 30px;
+            }
+        }
+
+        &-slider {
+            @include mix.size(100%, 2px);
+
+            position: relative;
+            background: #d2d1d6;
+
+            &::before,
+            &::after {
+                @include mix.size(22px);
+                content: "";
+                position: absolute;
+                top: 50%;
+                translate: 0 -50%;
+
+                border-radius: 50%;
+                border: 6px solid var(--primary-color-yellow);
+
+                background: var(--filter-form-bg);
+            }
+
+            &::before {
+                left: var(--min-value);
+            }
+
+            &::after {
+                left: var(--max-value);
+            }
+        }
+
+        &-input {
+            @extend .text-md-14;
+
+            width: 121px;
+            height: 36px;
+            padding: 0 12px;
+            border-radius: 6px;
+            border: 1px solid #d2d1d6;
+
+            color: var(--filter-form-text);
+            background: var(--filter-form-bg);
+        }
+    }
+    // End form
+
+    &__row {
+        display: flex;
+        flex: 1;
+    }
+}
