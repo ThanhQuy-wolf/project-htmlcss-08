@@ -48,6 +48,8 @@
 
         &-slider {
             @include mix.size(100%, 2px);
+            --min-value: 10%;
+            --max-value: 60%;
 
             position: relative;
             background: #d2d1d6;
@@ -75,6 +77,12 @@
             }
         }
 
+        &-input,
+        &-select-wrap {
+            border-radius: 6px;
+            border: 1px solid #d2d1d6;
+        }
+
         &-input {
             @extend .text-md-14;
 
@@ -87,11 +95,68 @@
             color: var(--filter-form-text);
             background: var(--filter-form-bg);
         }
+
+        &-select-wrap {
+            display: flex;
+            align-items: center;
+            padding: 0 14px;
+        }
+
+        &-select {
+            @extend .text-md-14;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            min-width: var(--width, 80px);
+            padding: 10px 0;
+
+            cursor: pointer;
+
+            &-arrow {
+                filter: var(--filter-form-fill-icon);
+            }
+        }
+
+        &-select-separate {
+            width: 1px;
+            height: 100%;
+            margin: 0 14px;
+            background: #d2d1d6;
+        }
+
+        &-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 20px;
+        }
+
+        &-tag {
+            @extend .text-md-14;
+
+            padding: 6px 12px;
+            border-radius: 6px;
+
+            color: #9E9DA8;
+            background: var(--filter-form-tag-bg);
+
+            transition: color 0.2s;
+
+            &:hover {
+                color: var(--filter-form-text);
+            }
+        }
     }
     // End form
 
     &__row {
         display: flex;
-        flex: 1;
+    }
+
+    &__separate {
+        width: 1px;
+        margin: 0 30px;
+        background: #eee;
     }
 }
