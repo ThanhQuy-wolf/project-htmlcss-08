@@ -1137,10 +1137,12 @@ input,
 button,
 textarea,
 select {
+  padding: 0;
   font-family: inherit;
   font-size: inherit;
   color: inherit;
   outline: none;
+  border: none;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -1187,7 +1189,7 @@ button {
   font-weight: var(--font-weight-bold);
 }
 
-.text-md-14, .filter__form-label--small, .filter__form-input, .filter__form-select, .filter__form-tag,
+.text-md-14, .filter__form-label--small, .filter__form-text-input--small .filter__form-input, .filter__form-select, .filter__form-tag,
 .text-md-15,
 .text-md-16,
 .product-card__title,
@@ -1210,6 +1212,7 @@ button {
 
 .text-rg-14, .menu-column__link,
 .text-rg-15,
+.filter__form-input,
 .product-card__brand,
 .text-rg-16,
 .cate-item__desc,
@@ -1275,6 +1278,7 @@ button {
 .text-bold-15,
 .text-md-15,
 .text-rg-15,
+.filter__form-input,
 .product-card__brand {
   font-size: var(--font-size-15);
 }
@@ -1282,7 +1286,7 @@ button {
 .text-bold-14, .filter-btn,
 .text-md-14,
 .filter__form-label--small,
-.filter__form-input,
+.filter__form-text-input--small .filter__form-input,
 .filter__form-select,
 .filter__form-tag,
 .text-rg-14,
@@ -2374,18 +2378,36 @@ html.dark {
 .filter__form-slider::after {
   left: var(--max-value);
 }
-.filter__form-input, .filter__form-select-wrap {
+.filter__form-text-input, .filter__form-select-wrap {
   border-radius: 6px;
   border: 1px solid #d2d1d6;
 }
-.filter__form-input {
+.filter__form-text-input {
+  width: 334px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  overflow: hidden;
+}
+.filter__form-text-input--small {
   width: 121px;
   height: 36px;
   padding: 0 12px;
-  border-radius: 6px;
-  border: 1px solid #d2d1d6;
+}
+.filter__form-input {
+  font-weight: 500;
+  width: 100%;
   color: var(--filter-form-text);
   background: var(--filter-form-bg);
+}
+.filter__form-input::placeholder {
+  font-weight: 400;
+  color: #9E9DA8;
+}
+.filter__form-input-icon {
+  margin-left: 12px;
+  filter: var(--filter-form-fill-icon);
 }
 .filter__form-select-wrap {
   display: flex;
