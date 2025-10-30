@@ -47,3 +47,48 @@
         display: none;
     }
 }
+
+//Buttons
+.btn {
+    @extend .text-md-18;
+    height: 46px;
+    padding: 0 20px;
+    border-radius: 6px;
+    line-height: 0;
+    background: #F8F8FB;
+    -webkit-user-select: none;
+    user-select: none;
+
+    + .btn {
+        margin-left: 20px;
+    }
+
+    &--text {
+        color: #9E9DA8;
+        font-weight: 400;
+        background: transparent;
+    }
+
+    &--primary {
+        background: var(--primary-color-yellow);
+    }
+
+    &--outline {
+        border: 1px solid #d2d1d6;
+        background: transparent;
+    }
+
+    &--rounded {
+        border-radius: 99px;
+    }
+
+    &:disabled,
+    &--disable {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    &:hover {
+        opacity: 0.9;
+    }
+}

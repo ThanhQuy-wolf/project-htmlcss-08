@@ -106,12 +106,13 @@
                 <div class="home__row">
                     <h2 class="home__heading">Total LavAzza 1320</h2>
                     <div class="filter-wrap">
-                        <button class="filter-btn">
+                        <button class="filter-btn js-toggle" toggle-target="#home-filter">
                             Filter
                             <img src="./assets/icons/filter.svg" alt="" class="filter-btn__icon icon" />
                         </button>
 
-                        <div class="filter">
+                        <div id="home-filter" class="filter hide">
+                            <img src="./assets/icons/arrow-up.png" alt="" class="filter__arrow" />
                             <h3 class="filter__heading">Filter</h3>
                             <form action="" class="filter__form">
                                 <div class="filter__row">
@@ -125,13 +126,27 @@
                                             <div>
                                                 <label for="" class="filter__form-label filter__form-label--small"> Minimum </label>
                                                 <div class="filter__form-text-input filter__form-text-input--small">
-                                                    <input type="text" name="" id="" value="$30.00" placeholder="Enter price" class="filter__form-input" />
+                                                    <input
+                                                        type="text"
+                                                        name=""
+                                                        id=""
+                                                        value="$30.00"
+                                                        placeholder="Enter price"
+                                                        class="filter__form-input"
+                                                    />
                                                 </div>
                                             </div>
                                             <div>
                                                 <label for="" class="filter__form-label filter__form-label--small"> Maximum </label>
                                                 <div class="filter__form-text-input filter__form-text-input--small">
-                                                    <input type="text" name="" id="" value="$100.00" placeholder="Enter price" class="filter__form-input" />
+                                                    <input
+                                                        type="text"
+                                                        name=""
+                                                        id=""
+                                                        value="$100.00"
+                                                        placeholder="Enter price"
+                                                        class="filter__form-input"
+                                                    />
                                                 </div>
                                             </div>
                                         </div>
@@ -188,6 +203,15 @@
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+
+                                <div class="filter__row filter__footer">
+                                    <button type="submit" class="btn btn--text filter__cancel js-toggle" toggle-target="#home-filter">
+                                        Cancel
+                                    </button>
+                                    <button type="submit" class="btn btn--primary filter__submit js-toggle" toggle-target="#home-filter">
+                                        Show Result
+                                    </button>
                                 </div>
                             </form>
                         </div>
