@@ -19,6 +19,17 @@
     transition: opacity, visibility;
     transition-duration: 0.2s;
 
+    @include mix.screen(xl) {
+        height: calc(100vh - 180px);
+        padding-bottom: 0;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+    }
+
+    @include mix.screen(sm) {
+        width: 85vw;
+    }
+
     &.hide {
         opacity: 0;
         visibility: hidden;
@@ -106,6 +117,10 @@
 
             overflow: hidden;
 
+            @include mix.screen(sm) {
+                width: 100%;
+            }
+
             &--small {
                 width: 121px;
                 height: 36px;
@@ -172,6 +187,10 @@
             display: flex;
             flex-wrap: wrap;
             gap: 10px 20px;
+
+            @include mix.screen(sm) {
+                gap: 10px 8px;
+            }
         }
 
         &-tag {
@@ -200,18 +219,35 @@
         width: 1px;
         margin: 0 30px;
         background: #eee;
+
+        @include mix.screen(xl) {
+            height: 1px;
+            width: 100%;
+            margin: 20px 0;
+        }
     }
 
     &__footer {
         display: flex;
         justify-content: flex-end;
         margin-top: 32px;
+
+        @include mix.screen(xl) {
+            position: sticky;
+            bottom: 0;
+            padding-bottom: 16px;
+            background: #fff;
+        }
     }
 
     &__cancel,
     &__submit {
         height: 38px;
         padding: 0 10px;
+
+        @include mix.screen(sm) {
+            flex: 1;
+        }
     }
 
     &__cancel {
@@ -220,5 +256,11 @@
 
     &__submit {
         font-size: 1.4rem;
+    }
+
+    &__content {
+        @include mix.screen(xl) {
+            flex-direction: column;
+        }
     }
 }
