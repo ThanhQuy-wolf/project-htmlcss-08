@@ -26,9 +26,9 @@ html {
     // Buttons
     --filter-btn-color: #6C6C72;
     --filter-btn-icon-color: brightness(0) saturate(100%) invert(7%) sepia(7%) saturate(7088%) hue-rotate(217deg) brightness(103%) contrast(95%);
-    --filter-bg: #fff;
+    --filter-bg: var(--secondary-color-5);
 
-    --like-btn-bg: #ffffff;
+    --like-btn-bg: var(--secondary-color-5);
     // --like-btn-fill: brightness(0) saturate(100%) invert(8%) sepia(38%) saturate(1030%) hue-rotate(210deg) brightness(93%) contrast(96%);
     --like-btn-shadow: rgba(124, 124, 124, 0.20);
     
@@ -37,35 +37,37 @@ html {
     --icon-dropdown-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
 
     @include mix.screen(lg) {
-        --background-color-header: #fff;
+        --background-color-header: var(--secondary-color-5);
         --background-color-body: #f6f6f6;
         --background-color-header-shadow: rgba(237, 237, 246, 0.2);
     }
 
     // Responsive navbar
-    --background-color-nav: #fff;
+    --background-color-nav: var(--secondary-color-5);
     --icon-navbar-close-color: brightness(0) saturate(100%) invert(9%) sepia(32%) saturate(617%) hue-rotate(184deg) brightness(102%) contrast(96%);
         --sidebar-shadow: rgba(200, 200, 200, 0.40);
 
     // Category item
     --cate-item-bg: #eee;
     --cate-item-title-color: #000;
-    --cate-item-heading-color: #1a162e;
-    --cate-item-thumb-bg: #fff;
+    --cate-item-heading-color: var(--secondary-color-1);
+    --cate-item-thumb-bg: var(--secondary-color-5);
 
     @include mix.screen(md) {
-        --cate-item-bg: #fff;
+        --cate-item-bg: var(--secondary-color-5);
     }
 
     // Product card
-    --product-card-bg: #fff;
+    --product-card-bg: var(--secondary-color-5);
     --product-card-shadow: rgba(237, 237, 246, 0.20);
-    --product-card-title: #1a162e;
+    --product-card-title: var(--secondary-color-1);
 
     // Filter form
-    --filter-form-bg: #fff;
+    --filter-form-bg: var(--secondary-color-5);
     --filter-form-shadow: rgba(200, 200, 200, 0.40);
-    --filter-form-text: #1a162e;
+    --filter-form-text: var(--secondary-color-1);
     --filter-form-tag-bg: #F8F8FB;
     --filter-form-fill-icon: brightness(0) saturate(100%) invert(8%) sepia(21%) saturate(1607%) hue-rotate(210deg) brightness(97%) contrast(97%);
+    --filter-form-submit-btn-color: var(--secondary-color-1);
+    --filter-form-icon-arrow-up: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(353deg) brightness(106%) contrast(102%);
 }
