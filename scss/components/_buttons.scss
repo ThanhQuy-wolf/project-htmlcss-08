@@ -50,6 +50,11 @@
 
 //Buttons
 .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
     @extend .text-md-18;
     height: 46px;
     padding: 0 20px;
@@ -60,7 +65,9 @@
     user-select: none;
 
     + .btn {
-        margin-left: 20px;
+        &:not(.btn--no-margin) {
+            margin-left: 20px;
+        }
     }
 
     &--text {

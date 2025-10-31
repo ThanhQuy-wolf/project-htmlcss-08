@@ -1,0 +1,118 @@
+@use "../base/mixins" as mix;
+
+.auth {
+    display: flex;
+    min-height: 100vh;
+
+    &__intro,
+    &__content {
+        flex: 1;
+        padding: 0 30px;
+    }
+
+    &__intro {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+
+        &-logo,
+        &-next {
+            position: absolute;
+            left: 50%;
+            translate: -50%;
+
+        }
+        &-logo {
+            top: 80px;
+        }
+
+        &-next {
+            bottom: 50px;
+        }
+
+        &-img {
+            max-width: 100%;
+        }
+
+        &-text {
+            max-width: 412px;
+            text-align: center;
+        }
+    }
+
+    &__content {
+        background: var(--auth-bg-content);
+
+        @include mix.screen(md) {
+            position: fixed;
+            inset: 0;
+            z-index: 1;
+            transition: translate 0.3s;
+            overflow-y: auto;
+
+            
+            &.hide {
+                translate: 100%;
+            }
+        }
+
+        &-inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            width: min(460px, 100%);
+            margin: 0 auto;
+            padding: 50px 0;
+        }
+    }
+
+    &__heading {
+        margin-top: 50px;
+        margin-bottom: 10px;
+        color: var(--auth-heading);
+    }
+
+    &__desc {
+        padding: 0 30px;
+        color: var(--secondary-color-2);
+    }
+
+    &__form {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    &__link {
+        color: var(--primary-color-blue);
+    }
+
+    &__btn-group {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 50px;
+    }
+
+    &__btn {
+        width: 100%;
+
+        &-sign-in {
+            color: var(--auth-btn-sign-in);
+
+            &-icon {
+                filter: var(--auth-btn-sign-in-icon);
+            }
+        }
+    }
+
+    &__text {
+        margin-top: 108px;
+        color: var(--secondary-color-2);
+    }
+}

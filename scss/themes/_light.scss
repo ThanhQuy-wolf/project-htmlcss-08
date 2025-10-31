@@ -70,4 +70,8 @@ html {
     --filter-form-fill-icon: brightness(0) saturate(100%) invert(8%) sepia(21%) saturate(1607%) hue-rotate(210deg) brightness(97%) contrast(97%);
     --filter-form-submit-btn-color: var(--secondary-color-1);
     --filter-form-icon-arrow-up: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(353deg) brightness(106%) contrast(102%);
+
+    // Auth
+    --auth-bg-content: #FFF;
+    --auth-form: #9e9da8;
 }
