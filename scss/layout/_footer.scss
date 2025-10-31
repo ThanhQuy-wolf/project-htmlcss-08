@@ -1,0 +1,65 @@
+@use "../base/mixins" as mix;
+@use "../base/common" as *;
+
+.footer {
+    margin: 100px 100px 50px;
+
+    &__content {
+        @extend .text-rg-16;
+        line-height: 1.3;
+
+        padding-right: 50px;
+        margin: 30px 0;
+        color: var(--footer-text-color);
+    }
+
+    &__title {
+        @extend .text-bold-18;
+        margin-bottom: 20px;
+    }
+
+    &__item {
+        @extend .text-rg-16;
+
+        margin-bottom: 15px;
+
+        color: var(--footer-text-color);
+    }
+
+    &__item:last-child {
+        margin-bottom: 0;
+    }
+
+    &__address {
+        width: 50%;
+        color: var(--footer-text-color);
+    }
+
+    &__copyright {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    &__copyright-text {
+        @extend .text-rg-16;
+        color: var(--footer-text-color);
+    }
+}
+
+.social {
+    &__cover {
+        display: flex;
+        gap: 20px;
+    }
+
+    &__item {
+        @include mix.size(32px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 8px;
+        background: var(--footer-icon-bg);
+    }
+}

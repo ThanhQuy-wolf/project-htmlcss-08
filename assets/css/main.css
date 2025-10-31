@@ -1177,6 +1177,7 @@ button {
 .text-bold-15,
 .text-bold-16,
 .text-bold-18,
+.footer__title,
 .text-bold-22,
 .cate-item__title,
 .logo__title,
@@ -1217,6 +1218,9 @@ button {
 .product-card__brand,
 .text-rg-16,
 .cate-item__desc,
+.footer__content,
+.footer__item,
+.footer__copyright-text,
 .text-rg-18,
 .text-rg-22,
 .text-rg-24 {
@@ -1257,7 +1261,7 @@ button {
   font-size: var(--font-size-22);
 }
 
-.text-bold-18,
+.text-bold-18, .footer__title,
 .text-md-18,
 .slideshow__num,
 .btn,
@@ -1273,7 +1277,10 @@ button {
 .menu-column__heading,
 .sub-menu--not-main,
 .text-rg-16,
-.cate-item__desc {
+.cate-item__desc,
+.footer__content,
+.footer__item,
+.footer__copyright-text {
   font-size: var(--font-size-16);
 }
 
@@ -1784,6 +1791,52 @@ button {
   margin-right: auto;
 }
 
+.footer {
+  margin: 100px 100px 50px;
+}
+.footer__content {
+  line-height: 1.3;
+  padding-right: 50px;
+  margin: 30px 0;
+  color: var(--footer-text-color);
+}
+.footer__title {
+  margin-bottom: 20px;
+}
+.footer__item {
+  margin-bottom: 15px;
+  color: var(--footer-text-color);
+}
+.footer__item:last-child {
+  margin-bottom: 0;
+}
+.footer__address {
+  width: 50%;
+  color: var(--footer-text-color);
+}
+.footer__copyright {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.footer__copyright-text {
+  color: var(--footer-text-color);
+}
+
+.social__cover {
+  display: flex;
+  gap: 20px;
+}
+.social__item {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: var(--footer-icon-bg);
+}
+
 html {
   --primary-color-red: #f94545;
   --primary-color-green: #67b044;
@@ -1891,6 +1944,8 @@ html.dark {
   --filter-form-fill-icon: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7471%) hue-rotate(247deg) brightness(96%) contrast(100%);
   --filter-form-submit-btn-color: #1a162e;
   --filter-form-icon-arrow-up: brightness(0) saturate(100%) invert(12%) sepia(27%) saturate(517%) hue-rotate(182deg) brightness(101%) contrast(87%);
+  --footer-icon-bg: #171c28;
+  --footer-text-color: var(--secondary-color-2);
 }
 @media (max-width: 991.98px) {
   html.dark {
