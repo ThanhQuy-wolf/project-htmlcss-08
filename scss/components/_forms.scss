@@ -1,4 +1,5 @@
 @use "../base/common" as *;
+@use "../base/mixins" as mix;
 
 .form {
     &:has(:invalid) &__submit-btn {
@@ -43,6 +44,10 @@
         &:focus-within {
             border-color: #77dae6;
         }
+
+        @include mix.screen(md) {
+            height: 48px;
+        }
     }
 
     &__error {
@@ -74,6 +79,10 @@
         &::placeholder {
             color: var(--auth-form);
         }
+
+        @include mix.screen(md) {
+            font-size: 1.6rem;
+        }
     }
 
     &__pull-right {
@@ -91,6 +100,10 @@
         &-label {
             margin-left: 29px;
             color: var(--auth-form);
+
+            @include mix.screen(md) {
+                font-size: 1.4rem;
+            }
         }
 
         &::before,

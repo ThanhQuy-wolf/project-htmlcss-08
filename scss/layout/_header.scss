@@ -26,6 +26,29 @@
         padding: 16px 0;
         justify-content: space-between;
     }
+
+    &__logo {
+        @include mix.screen(lg) {
+            gap: 10px !important;
+            margin-left: 39px;
+
+            &-title {
+                font-size: 1.8rem;
+            }
+
+            &-img {
+                width: 24px;
+            }
+        }
+
+        @include mix.screen(md) {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+            margin-left: 0;
+        }
+    }
 }
 
 .navbar {

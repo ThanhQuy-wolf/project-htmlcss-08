@@ -6,26 +6,7 @@
     align-items: center;
     gap: 14px;
 
-    @include mix.screen(lg) {
-        gap: 10px;
-        margin-left: 39px;
-    }
-
-    @include mix.screen(md) {
-        margin-left: 0;
-    }
-
     &__title {
         @extend .text-bold-22;
-
-        @include mix.screen(lg) {
-            font-size: 1.8rem;
-        }
-    }
-
-    &__img {
-        @include mix.screen(lg) {
-            width: 24px;
-        }
     }
 }

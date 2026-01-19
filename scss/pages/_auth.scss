@@ -4,6 +4,10 @@
     display: flex;
     min-height: 100vh;
 
+    @supports (-webkit-touch-callout: none) {
+        min-height: -webkit-fill-available;
+    }
+
     &__intro,
     &__content {
         flex: 1;
@@ -24,7 +28,6 @@
             position: absolute;
             left: 50%;
             translate: -50%;
-
         }
         &-logo {
             top: 80px;
@@ -41,6 +44,10 @@
         &-text {
             max-width: 412px;
             text-align: center;
+
+            @include mix.screen(md) {
+                font-size: 1.5rem;
+            }
         }
     }
 
@@ -54,7 +61,6 @@
             transition: translate 0.3s;
             overflow-y: auto;
 
-            
             &.hide {
                 translate: 100%;
             }
@@ -76,20 +82,36 @@
         margin-top: 50px;
         margin-bottom: 10px;
         color: var(--auth-heading);
+
+        @include mix.screen(md) {
+            font-size: 2.2rem;
+        }
     }
 
     &__desc {
         padding: 0 30px;
         color: var(--secondary-color-2);
+
+        @include mix.screen(md) {
+            font-size: 1.4rem;
+        }
     }
 
     &__form {
         width: 100%;
         margin-top: 30px;
+
+        @include mix.screen(md) {
+            margin-top: 0;
+        }
     }
 
     &__link {
         color: var(--primary-color-blue);
+
+        @include mix.screen(md) {
+            font-size: 1.4rem;
+        }
     }
 
     &__btn-group {
@@ -114,5 +136,13 @@
     &__text {
         margin-top: 108px;
         color: var(--secondary-color-2);
+
+        @include mix.screen(md) {
+            font-size: 1.6rem;
+        }
+
+        &-link {
+            font-size: inherit;
+        }
     }
 }
